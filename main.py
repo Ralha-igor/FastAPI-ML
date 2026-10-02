@@ -2,9 +2,18 @@ import io
 import numpy as np
 import tensorflow as tf
 from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from PIL import Image
 
 app = FastAPI(title="API Doenças do Café")
+
+# Libera chamadas vindas do app (necessário para o navegador)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["GET", "POST"],
+    allow_headers=["*"],
+)
 
 CLASSES = [
     'bicho_mineiro',
