@@ -1,6 +1,6 @@
 fastapi==0.110.0
 uvicorn==0.28.0
-tensorflow-cpu==2.16.1
+tensorflow-cpu==2.18.0
 pillow==10.2.0
 python-multipart==0.0.9
 numpy==1.26.4
